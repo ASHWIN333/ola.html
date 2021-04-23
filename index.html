@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ola cabs</title>
+
+</head>
+<body style="background-color:rgb(32, 255, 111);">
+<center><h1>WELCOME TO OLA CABS </h1> </center>
+<center><h2>LOGIN</h2></center>
+<br />
+<form onsubmit="login()">
+    <center>
+    <label for="mobile number">Mobile number:</label>
+    <input type="mobile number" name="mobilenumber" id="mobilenumber" placeholder="Enter mobile number" required> 
+    <br />
+    <label for="Password">Password:</label>
+    <input type="Password" name="Password" id="password" placeholder="Enter valid password" required >
+    <br />
+    <button type="Submit">Submit</button>
+    <br />
+    <button type="reset">Reset</button>
+    <br />
+    </center>
+</form>
+<script>
+function login(){
+    event.preventDefault();
+    //alert("Login button clicked");
+    let mobilenumber=document.querySelector("#mobilenumber").value;
+    //alert("Username:" + name);
+    let password=document.querySelector("#password").value;
+    alert("mobilenumber is: "  + mobilenumber);
+    if(mobilenumber.length==10 && password.length>=8){
+        alert("Login Success");
+        window.location.href="q12.html";
+    }
+    else{
+        alert("Invalid login credentials")
+        }
+
+}
+/*function hello(){
+    alert("Hello")
+}*/
+
+</script>
+</form>
+</body>
+</html>

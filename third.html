@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ola cabs</title>
+</head>
+<body style="background-color:rgb(32, 255, 111);">
+<h1><center>FARE ESTIMATOR</h1>
+<form action onsubmit="type()">
+</br>
+<center>
+<label>Select Cab Type: </label>
+<select name="cabtype" id="cabtype" required>
+<option disabled>--Select cab type--</option>
+<option value="MICRO">Micro </option>
+<option value="MINI">Mini</option>
+<option value="PRIME">Prime </option>
+</select>
+<br/>
+<label>Enter kilometers:</label>
+<input type="number" id="kms"placeholder="Enter kms" required>
+<br/>
+<button type="SUBMIT">Submit</button>
+<button type="RESET">Reset</button>
+</center>
+
+</form>
+<script>
+    function type()
+    {
+        event.preventDefault();
+        //alert("Cab type selected");
+        let cab=document.querySelector("#cabtype").value;
+        //alert("cabtype :" +cab)
+        let kms=document.querySelector("#kms").value;
+        alert("No of kilometers:"+ kms);
+        window.location.href="fourth.html";
+    }
+</script>
+</body>
+</html>
